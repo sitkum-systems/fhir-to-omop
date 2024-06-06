@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.InputStream;
 
 import org.nachc.tools.fhirtoomop.util.params.AppParams;
-import org.nachc.tools.fhirtoomop.util.win.r.RunRFileAsBat;
+import org.nachc.tools.fhirtoomop.util.r.RunRFile;
 
 import com.nach.core.util.file.FileUtil;
 import com.nach.core.util.http.HttpRequestClient;
@@ -69,7 +69,7 @@ public class ACH1_RunAchilles {
 		// download the driver if it doesn't exist
 		downloadDriver(pathToDriver);
 		log.info("Running Achilles...");
-		RunRFileAsBat.run(rString);
+		RunRFile.run(rString);
 		log.info("DONE: Running Achilles...");
 	}
 

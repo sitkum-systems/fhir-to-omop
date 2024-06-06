@@ -69,6 +69,13 @@
 
 	<dependencies>
 
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.14.0</version>
+		</dependency>
+
 		<!-- CORE NACHC FRAMEWORK STUFF -->
 		<dependency>
 			<groupId>org.nachc.cad.tools</groupId>
@@ -92,7 +99,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.8</version>
+			<version>1.18.30</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -319,6 +326,7 @@
 							<tasks>
 								<echo>Copying files</echo>
 								<copy file="${basedir}/src/main/resources/main/bat/fhir-to-omop.bat" tofile="${basedir}/target/fhir-to-omop/fhir-to-omop.bat" />
+								<copy file="${basedir}/src/main/resources/main/bat/fhir-to-omop.sh" tofile="${basedir}/target/fhir-to-omop/fhir-to-omop.sh" />
 								<copy file="${basedir}/src/main/resources/main/auth/app.properties" tofile="${basedir}/target/fhir-to-omop/auth/app.properties" />
 								<copy file="${basedir}/src/main/resources/fhir-context.txt" tofile="${basedir}/target/fhir-to-omop/fhir-context.txt" />
 								<copy file="${basedir}/app.properties" tofile="${basedir}/target/fhir-to-omop/auth/default.properties" />
@@ -373,7 +381,6 @@
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
 	</build>
 

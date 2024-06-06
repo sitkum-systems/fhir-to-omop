@@ -2,7 +2,7 @@ package org.nachc.tools.fhirtoomop.tools.build.postgres.build;
 
 import java.io.File;
 
-import org.nachc.tools.fhirtoomop.util.win.r.RunRFileAsBat;
+import org.nachc.tools.fhirtoomop.util.r.RunRFile;
 
 import com.nach.core.util.file.FileUtil;
 
@@ -21,7 +21,7 @@ public class ETLSYN01_LoadSynthFiles {
 			log.info("LOADING TEST DATA USING ETL-Synthea R-SCRIPTS");
 			// get the file to run
 			String rScript = FileUtil.getAsString("/postgres/build/r/load-synthea-files.R");
-			RunRFileAsBat.run(rScript);
+			RunRFile.run(rScript);
 			log.info("DONE LOADING TEST DATA USING ETL-Synthea R-SCRIPTS");
 		} catch(Exception exp) {
 			throw (new RuntimeException(exp));

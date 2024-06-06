@@ -1,6 +1,6 @@
 package org.nachc.tools.fhirtoomop.tools.build.postgres.build;
 
-import org.nachc.tools.fhirtoomop.util.win.r.RunRFileAsBat;
+import org.nachc.tools.fhirtoomop.util.r.RunRFile;
 
 import com.nach.core.util.file.FileUtil;
 
@@ -17,7 +17,7 @@ public class ACH0_InstallAch {
 		// run the install script
 		log.info("---------------------");
 		log.info("START: Installing Achilles...");
-		RunRFileAsBat.run(FileUtil.getAsString("/postgres/build/r/achilles/install-achilles.r"));
+		RunRFile.run(FileUtil.getAsString("/postgres/build/r/achilles/install-achilles.r"));
 		log.info("DONE: Installing Achilles...");
 		log.info("---------------------");
 	}
