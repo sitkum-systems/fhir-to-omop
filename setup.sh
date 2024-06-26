@@ -1,5 +1,5 @@
 # Install JDK
-sudo dnf install java-11-amazon-corretto
+echo y | sudo dnf install java-11-amazon-corretto
 JRE_HOME=/usr/lib/jvm/java-11-amazon-corretto/
 sudo chmod +x $JRE_HOME/lib/jspawnhelper
 
@@ -10,7 +10,7 @@ sudo yum install -y apache-maven
 mvn --version
 
 # Install Docker
-sudo yum install docker
+sudo yum install -y docker
 
 # Install docker-compose
 sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
@@ -28,7 +28,7 @@ wget https://nachc-cad.github.io/fhir-to-omop/pages/navbar/getting-started/fhir-
 cd ..
 
 # Install R
-sudo yum install R
+sudo yum install -y R
 
 # Compile the code
 cd fhir-to-omop

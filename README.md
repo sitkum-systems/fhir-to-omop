@@ -16,8 +16,8 @@ This installation procedure was tested on an AWS EC2 instance running on the AWS
 ## Clone `fhir-to-omop` repo and set to correct commit
 ```
 git clone https://github.com/sitkum-systems/fhir-to-omop.git
-git reset --hard b44fe472aed835e19a216185d97c5ae0f4f9295e
 cd fhir-to-omop
+git reset --hard b44fe472aed835e19a216185d97c5ae0f4f9295e
 ```
 
 ## Run the setup script to install dependencies and build `fhir-to-omop`
