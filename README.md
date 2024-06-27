@@ -17,22 +17,24 @@ This installation procedure was tested on an AWS EC2 instance running on the AWS
 ```
 git clone https://github.com/sitkum-systems/fhir-to-omop.git
 cd fhir-to-omop
-git reset --hard b44fe472aed835e19a216185d97c5ae0f4f9295e
+git checkout linux
+cd ..
 ```
 
 ## Run the setup script to install dependencies and build `fhir-to-omop`
-`sudo bash setup.sh`
+`sudo bash fhir-to-omop/setup.sh`
 
 # Running `fhir-to-omop`
 
 ## Start up the Broadsea Docker container for the Postgres server, etc
 ```
 cd Broadsea
-docker-compose pull && docker-compose --profile default up -d
+sudo systemctl start docker
+sudo docker-compose pull && sudo docker-compose --profile default up -d
 cd ..
 ```
 *Note* you can later use the following command to stop the Broadsea container:
-`docker-compose --profile default down`
+`sudo docker-compose --profile default down`
 
 ## Set the application configuration
 Settings for the application can be altered in the `app.properties` file within the `fhir-to-omop` repo.

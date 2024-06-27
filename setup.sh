@@ -24,8 +24,9 @@ git checkout 069e0492823b43705f849ffc710c6d07dfd19980
 
 # Replace docker-compose.yml for running fhir-to-omop
 rm docker-compose.yml
-wget https://nachc-cad.github.io/fhir-to-omop/pages/navbar/getting-started/fhir-to-omop/img/docker-compose.yml
+# wget https://nachc-cad.github.io/fhir-to-omop/pages/navbar/getting-started/fhir-to-omop/img/docker-compose.yml
 cd ..
+cp fhir-to-omop/BroadseaComponents/docker-compose.yml Broadsea
 
 # Install R
 sudo yum install -y R
